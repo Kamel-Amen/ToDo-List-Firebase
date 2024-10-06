@@ -43,10 +43,12 @@ $bg-login: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='
   background-image: url($bg-register);
   background-attachment: fixed;
   background-size: cover;
-  font-family: 'Roboto', sans-serif !important;
-  section {
+  font-family: 'Anton', sans-serif !important;
+  .register-sec {
     p {
-      font-size: 2rem;
+      background-image: url($bg-login);
+      text-shadow: 2px 2px 2px #000000;
+      letter-spacing: 0.25rem;
     }
   }
 }
@@ -59,6 +61,13 @@ $bg-login: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='
   background-color: #330033;
   background-image: url($bg-login);
   font-family: 'Anton', sans-serif !important;
+  .login-sec {
+    p {
+      background-image: url($bg-register);
+      text-shadow: 2px 2px 2px #000000;
+      letter-spacing: 0.25rem;
+    }
+  }
 }
 /* Login Component Css */
 

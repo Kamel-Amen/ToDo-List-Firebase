@@ -12,6 +12,8 @@ import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const { name } = useGetUserInfo();
+  const holder = name.split('@');
+  const username = holder[0];
   const navigate = useNavigate();
 
   const signUserOut = async () => {
@@ -31,7 +33,7 @@ const Navbar = () => {
         <a className='navbar-brand fw-bold' href='#'>
           Welcome to your todo list{' '}
           <span className='text-primary fw-light text-decoration-underline'>
-            {name}
+            {username}
           </span>{' '}
           <FontAwesomeIcon icon={faFaceSmile} className='text-primary' />
         </a>

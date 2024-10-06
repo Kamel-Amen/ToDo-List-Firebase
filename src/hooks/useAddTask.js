@@ -6,12 +6,12 @@ export const useAddTask = () => {
   const todoCollectionRef = collection(db, 'todos');
   const { userId } = useGetUserInfo();
 
-  const addTask = async ({ task, status }) => {
+  const addTask = async ({ task, pending }) => {
     // console.log(userId, task, status);
     await addDoc(todoCollectionRef, {
       userId,
       task,
-      status,
+      pending,
       createdAt: serverTimestamp(),
     });
   };
